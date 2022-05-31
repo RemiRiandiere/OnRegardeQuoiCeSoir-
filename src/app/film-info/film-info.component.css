@@ -1,0 +1,18 @@
+.movieCard {
+  box-sizing: border-box;
+  width: 40%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
+}
+
+.movieCard > img {
+  width: 100%;
+}
+.movieCard > h2 {
+  margin-bottom: 0;
+}
+.movieCard > p {
+  font-weight: 300;
+  font-size: 16px;
+}
