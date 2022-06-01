@@ -1,0 +1,14 @@
+.filmInfo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.movieCard {
+  width: 25%;
+  align-self: stretch;
+  margin: 20px;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
+}

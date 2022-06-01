@@ -8,11 +8,7 @@ import { GetFilmService } from './services/get-film.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  movies: FilmInfo[];
+  constructor() {}
 
-  constructor(private filmService: GetFilmService) {}
-
-  ngOnInit() {
-    this.movies = this.filmService.getMovieList();
-  }
+  ngOnInit() {}
 }
