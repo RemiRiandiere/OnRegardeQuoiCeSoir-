@@ -1,13 +1,16 @@
-nav {
+mat-toolbar {
   background-color: grey;
   height: 7vh;
-  text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 a {
   margin: 0 10px;
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 

@@ -1,7 +1,13 @@
-<div class="filmInfo">
-  <app-film-info
-    *ngFor="let movie of movies"
-    [movie]="movie"
-    class="movieCard"
-  ></app-film-info>
+<app-menu></app-menu>
+<div
+  class="filmInfo"
+  fxLayout="row"
+  fxLayout.xs="row"
+  fxLayoutWrap
+  fxLayoutGap="0.5%"
+  fxLayoutAlign="space-between"
+>
+  <div fxFlex="20%" *ngFor="let movie of movies" class="movieCard">
+    <img src="{{ movie.imgUrl }}" alt="{{ movie.title }}" class="poster" />
+  </div>
 </div>
