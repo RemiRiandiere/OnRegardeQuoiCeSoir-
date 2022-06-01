@@ -34,12 +34,27 @@ export class GetFilmService {
               movie['overview'],
               'https://image.tmdb.org/t/p/original' + movie['poster_path'],
               new Date(movie['release_date']),
-              [new ActorInfo('Acteur1', 'img', new Date())]
+              this.getActors(movie['id'])
             )
           );
         }
       });
     }
+  }
+
+  private getActors(movie_id: number): Array<ActorInfo> {
+    let url =
+      'https://api.themoviedb.org/3/movie/' +
+      movie_id +
+      '/credits?api_key=459b8720d2105e32a82ca5ace74f4785&language=fr-FR';
+    const actorList = new Array<ActorInfo>();
+    this.http.get(url).subscribe((data: any) => {
+      let actorsJson = data['cast'];
+      for (let i = 0; i < 6; i++) {
+        actorList.push(new ActorInfo(actorsJson[i]['name'], '', new Date()));
+      }
+    });
+    return actorList;
   }
 
   public getMovieList() {
