@@ -1,11 +1,9 @@
 export class ActorInfo {
   name: string;
-  dateOfBirth: Date;
-  imgUrl: string;
-  
-  constructor(name: string, imgUrl: string, dateOfBirth: Date) {
+  role: string;
+
+  constructor(name: string, role: string) {
     this.name = name;
-    this.imgUrl = imgUrl;
-    this.dateOfBirth = dateOfBirth;
+    this.role = role;
   }
 }

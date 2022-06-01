@@ -1,3 +1,7 @@
+.filmInfo {
+  display: flexbox;
+}
+
 p {
   font-family: Lato;
 }

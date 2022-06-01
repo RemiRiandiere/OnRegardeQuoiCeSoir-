@@ -12,7 +12,6 @@ export class GetFilmService {
   constructor(private http: HttpClient) {
     this.movieList = new Array<FilmInfo>();
     this.fillMovieList(50);
-    //console.log(this.movieList);
   }
 
   private getMovie(page_number: Number) {
@@ -33,8 +32,7 @@ export class GetFilmService {
               movie['title'],
               movie['overview'],
               'https://image.tmdb.org/t/p/original' + movie['poster_path'],
-              new Date(movie['release_date']),
-              this.getActors(movie['id'])
+              new Date(movie['release_date'])
             )
           );
         }
@@ -51,7 +49,9 @@ export class GetFilmService {
     this.http.get(url).subscribe((data: any) => {
       let actorsJson = data['cast'];
       for (let i = 0; i < 6; i++) {
-        actorList.push(new ActorInfo(actorsJson[i]['name'], '', new Date()));
+        actorList.push(
+          new ActorInfo(actorsJson[i]['name'], actorsJson[i]['character'])
+        );
       }
     });
     return actorList;
