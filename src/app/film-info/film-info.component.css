@@ -1,15 +1,8 @@
-.movieCard {
-  box-sizing: border-box;
-  width: 40%;
-  margin: 20px auto;
-  padding: 10px 30px;
-  box-shadow: lightgray 4px 4px 20px;
-}
-
-.movieCard > img {
+img {
   width: 100%;
+  align-self: flex-end;
 }
-.movieCard > h2 {
+h2 {
   margin-bottom: 0;
 }
 .movieCard > p {
